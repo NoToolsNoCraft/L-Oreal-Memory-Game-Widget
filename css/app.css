@@ -123,8 +123,8 @@ label:active {
 
 .container {
     width: 100%;
-    max-width: 800px;
-    height: 100vh; /* Ensures it fits exactly in the viewport */
+    max-width: 600px;
+    max-height: 100vh; /* Ensure it doesn't exceed viewport height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -134,34 +134,39 @@ label:active {
     box-sizing: border-box;
 }
 
+@media (min-width: 569px) and (max-width: 799px) {
+    .container {
+    
+    max-width: 565px;
+    
+    }
+}
+@media (min-width: 800px) and (max-width: 1366px) {
+    .container {
+    
+    max-width: 535px;
+    
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .container {
+    
+    max-width: 635px;
+    
+    }
+}
+
     .internal {
     border: 6px double #000; 
     outline-offset: -3px; 
-    transform: scale(0.80); 
+    
+    
     transform-origin: top;
     }
     
 
-    @media (max-width: 634px) {
-    .internal {
-    
-    transform: scale(1); 
-    }
-    }
-
-    @media (min-width: 634px) and (max-width: 715px) {
-    .internal {
-    
-    transform: scale(0.90); 
-    }
-    }
-
-    @media (min-width: 716px) and (max-width: 799px) {
-    .internal {
-    
-    transform: scale(0.85); 
-    }
-    }
+   
 
 .game-board {
     /* gradiend credit uiGradients */
