@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 1.1rem;
+    overflow: hidden;
 }
 
 * {
@@ -128,10 +129,18 @@ label:active {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto; /* Scroll internally if absolutely necessary */
+    
     margin: 0 auto;
     
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .container {
+    
+    max-width: 265px;
+    
+    }
 }
 
 @media (min-width: 569px) and (max-width: 799px) {
@@ -144,7 +153,7 @@ label:active {
 @media (min-width: 800px) and (max-width: 1366px) {
     .container {
     
-    max-width: 410px;
+    max-width: 535px;
     
     }
 }
@@ -376,6 +385,13 @@ label:active {
 
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
+    /* Allow scrolling only for mobile landscape */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    html, body {
+        overflow: auto;
+    }
+}
+    
     .modal {
         align-items: center; /* Center vertically again */
         padding: 10px;
