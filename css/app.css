@@ -122,12 +122,46 @@ label:active {
 /*Styles for the game board*/
 
 .container {
-    transform: scale(0.75);
-    transform-origin: top;
-    margin: 0 auto;
     width: 100%;
     max-width: 800px;
+    height: 100vh; /* Ensures it fits exactly in the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Scroll internally if absolutely necessary */
+    margin: 0 auto;
+    
+    box-sizing: border-box;
 }
+
+    .internal {
+    border: 6px double #000; 
+    outline-offset: -3px; 
+    transform: scale(0.80); 
+    transform-origin: top;
+    }
+    
+
+    @media (max-width: 634px) {
+    .internal {
+    
+    transform: scale(1); 
+    }
+    }
+
+    @media (min-width: 634px) and (max-width: 715px) {
+    .internal {
+    
+    transform: scale(0.90); 
+    }
+    }
+
+    @media (min-width: 716px) and (max-width: 799px) {
+    .internal {
+    
+    transform: scale(0.85); 
+    }
+    }
 
 .game-board {
     /* gradiend credit uiGradients */
