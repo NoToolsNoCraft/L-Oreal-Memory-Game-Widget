@@ -153,9 +153,13 @@ label:active {
 @media (min-width: 800px) and (max-width: 1366px) {
     .container {
     
-    max-width: 410px;
+    max-width: 425px;
     
     }
+    label {
+    line-height: 30px;
+}
+    
 }
 
 @media (min-width: 1367px) and (max-width: 1920px) {
